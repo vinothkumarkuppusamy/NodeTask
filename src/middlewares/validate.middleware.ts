@@ -1,5 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { validationResult, ValidationError } from 'express-validator';
+import { STATUSCODE } from '../utils/statuscode';
+import { handleResponse } from '../utils/response.util';
 
 export const validateRequest = (
   req: Request,
@@ -13,10 +15,9 @@ export const validateRequest = (
       message: err.msg,
     }));
 
-    res.status(400).json({
-      message: 'Validation Error',
-      errors: formattedErrors,
-    });
+    res.status(STATUSCODE.BAD_REQUEST).json(handleResponse(
+      'Validation Error occured',
+    ));
     return;
   }
 
