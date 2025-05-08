@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "_id": "663bfa91a5e4a2a6f1d5e501",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "Admin@123",
+      "role": "admin"
+    },
+    {
+      "_id": "663bfa91a5e4a2a6f1d5e502",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "John@123",
+      "role": "user"
+    },
+    {
+      "_id": "663bfa91a5e4a2a6f1d5e503",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "Jane@123",
+      "role": "user"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Complete API documentation",
+      "description": "Document all the endpoints and error handling",
+      "dueDate": "2025-05-15T00:00:00.000Z",
+      "status": "pending",
+      "assignedTo": "john@example.com",
+      "creatorId": "663bfa91a5e4a2a6f1d5e501"
+    },
+    {
+      "title": "Fix login bug",
+      "description": "Resolve password comparison issue on login",
+      "dueDate": "2025-05-10T00:00:00.000Z",
+      "status": "in progress",
+      "assignedTo": "jane@example.com",
+      "creatorId": "663bfa91a5e4a2a6f1d5e502"
+    },
+    {
+      "title": "Deploy to production",
+      "description": "Deploy the latest build on AWS EC2",
+      "dueDate": "2025-05-20T00:00:00.000Z",
+      "status": "pending",
+      "assignedTo": "admin@example.com",
+      "creatorId": "663bfa91a5e4a2a6f1d5e501"
+    }
+  ]
+}

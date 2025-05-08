@@ -5,7 +5,8 @@ export interface Itask extends Document {
   description: string;
   status: "pending" | "in-progress" | "complete";
   dueDate: Date;
-  assignedTo: Schema.Types.ObjectId;
+  assignedTo: string;
+  creatorId: Schema.Types.ObjectId;
 }
 
 const taskSchema = new Schema<Itask>(
@@ -29,6 +30,10 @@ const taskSchema = new Schema<Itask>(
     assignedTo: {
       type: String
     },
+    creatorId: {
+      type: mongoose.Types.ObjectId,
+      ref: 'User',
+    }
   },
   { timestamps: true }
 );

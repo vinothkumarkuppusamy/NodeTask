@@ -10,7 +10,8 @@ export const createTask = async (
   next: NextFunction
 ) => {
   try {
-    const task = await Task.create({ ...req.body});
+    const userId = req.user?.userId;
+    const task = await Task.create({ ...req.body, creatorId: userId });
     res
       .status(STATUSCODE.CREATED)
       .json(handleResponse("Task created successfully", task));
